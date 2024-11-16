@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+	  "module": "Node16",                  // Ensure compatibility with Node.js 16.x or higher
+	  "target": "ES2022",                  // Set the ECMAScript target version (you can adjust if needed)
+	  "lib": ["ES2022"],                   // Include the ES2022 library definitions
+	  "sourceMap": true,                   // Generate source maps for debugging
+	  "rootDir": "src",                    // Specify the root directory of your source files
+	  "strict": true,                      // Enable all strict type-checking options
+	  "esModuleInterop": true,             // Enable support for default imports from CommonJS modules
+	  "skipLibCheck": true,                // Skip type checking of declaration files for faster builds
+	  "forceConsistentCasingInFileNames": true, // Ensure file names are case-consistent across the project
+	  "moduleResolution": "Node16",        // Use Node16-style module resolution (important for Node.js projects)
+	  "resolveJsonModule": true,           // Allow importing `.json` files as modules
+	  "outDir": "./out"                    // Output directory for compiled files
+	},
+	"include": [
+	  "src/**/*.ts"                        // Include all TypeScript files in the src directory
+	],
+	"exclude": [
+	  "node_modules"                       // Exclude the node_modules directory to avoid unnecessary processing
+	]
+  }
+  

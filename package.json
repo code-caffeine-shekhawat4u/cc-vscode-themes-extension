@@ -1,0 +1,49 @@
+{
+  "name": "code-caffeine-themes",
+  "displayName": "Code Caffeine Mood-Based Themes",
+  "description": "Personalize your coding experience with mood-based themes! Code Caffeine Mood-Based Themes automatically adjusts your VS Code editor's color scheme to match your current mood or time of day. This extension is free to use.",
+  "version": "0.0.3",
+  "publisher": "codecaffeine",
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:code-caffeine-mood-based-themes.helloWorld",
+    "onCommand:code-caffeine-mood-based-themes.changeTheme"
+  ],
+  "main": "./dist/extension.js",
+  "icon": "cc.png",
+  "contributes": {
+    "commands": [
+      {
+        "command": "code-caffeine-mood-based-themes.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "code-caffeine-mood-based-themes.changeTheme",
+        "title": "Change Mood-Based Theme"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "npm run check-types && npm run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "npm run check-types && npm run lint && node esbuild.js --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "publisherMetadata": {
+    "pricing": "free",
+    "sponsor": "https://codecaffeine.tech"
+  }
+}
